@@ -386,6 +386,13 @@ const SETTINGS_SEARCH_ITEMS: readonly SettingsSearchItem[] = [
     keywords: ['walkthrough', 'diff', 'review', 'changes', 'structured output', 'model', 'override'],
   },
   {
+    id: 'sessions.mobile-landing',
+    page: 'sessions',
+    titleKey: 'settings.openchamber.mobileLanding.recents.label',
+    descriptionKey: 'settings.openchamber.mobileLanding.recents.description',
+    keywords: ['mobile', 'phone', 'landing', 'recents', 'recent sessions'],
+  },
+  {
     id: 'sessions.auto-cleanup',
     page: 'sessions',
     titleKey: 'settings.openchamber.sessionRetention.field.enableAutoCleanup',

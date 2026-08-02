@@ -32,3 +32,17 @@ describe('useSessionDisplayStore project sorting', () => {
     expect(migrated.showArchivedSessions).toBe(true);
   });
 });
+
+describe('migrateSessionDisplayState', () => {
+  test('v4 state gains mobileLandingMode last-session default', () => {
+    const migrated = migrateSessionDisplayState({ showRecentSection: true }, 4);
+
+    expect(migrated.mobileLandingMode).toBe('last-session');
+  });
+
+  test('v5 state keeps a persisted recents preference', () => {
+    const migrated = migrateSessionDisplayState({ mobileLandingMode: 'recents' }, 5);
+
+    expect(migrated.mobileLandingMode).toBe('recents');
+  });
+});
